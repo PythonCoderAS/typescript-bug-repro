@@ -10,56 +10,16 @@ Repro for typescript cts files
 
 ```js
 const { resolve } = require("path");
-const config = {
-    entry: "./src/index.ts",
-    module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                use: "ts-loader",
-                exclude: /node_modules|\.d\.ts$/,
-            },
-        ],
-    },
-    resolve: {
-        extensions: [".tsx", ".ts", ".js"],
-    },
-    output: {
-        filename: "bundle.js",
-        path: resolve(__dirname, "dist"),
-        library: "templib",
-    },
-    devtool: "source-map",
-};
+const config = resolve(__dirname, "config.cts");
 module.exports = config;
-//# sourceMappingURL=webpack.config.cjs.map
+//# sourceMappingURL=config.cjs.map
 ```
 
 ## Actual Output
 
 ```js
 import { resolve } from "path";
-const config = {
-    entry: "./src/index.ts",
-    module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                use: "ts-loader",
-                exclude: /node_modules|\.d\.ts$/,
-            },
-        ],
-    },
-    resolve: {
-        extensions: [".tsx", ".ts", ".js"],
-    },
-    output: {
-        filename: "bundle.js",
-        path: resolve(__dirname, "dist"),
-        library: "templib",
-    },
-    devtool: "source-map",
-};
-export default config;
-//# sourceMappingURL=webpack.config.cjs.map
+const config = resolve(__dirname, "config.cts");
+module.exports = config;
+//# sourceMappingURL=config.cjs.map
 ```
