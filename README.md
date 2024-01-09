@@ -31,7 +31,7 @@ const config = {
     },
     devtool: "source-map",
 };
-export default config;
+module.exports = config;
 //# sourceMappingURL=webpack.config.cjs.map
 ```
 
