@@ -8,6 +8,6 @@
       "sourceMap": true,
       "moduleResolution": "Bundler"
     },
-    "include": ["webpack.config.cts"]
+    "include": ["config.cts"]
   }
   
