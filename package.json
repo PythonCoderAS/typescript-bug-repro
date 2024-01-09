@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "@types/node": "^20.10.8",
+    "typescript": "^5.4.0-dev.20240109",
+    "webpack": "^5.89.0"
+  },
+  "scripts": {
+    "build-ts": "tsc -b"
+  }
+}
